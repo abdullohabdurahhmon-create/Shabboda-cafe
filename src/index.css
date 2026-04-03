@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-primary: #1a3c34; /* Deep Emerald */
+  --color-secondary: #c5a059; /* Gold */
+  --color-accent: #fdfaf3; /* Warm Cream */
+}
+
+@layer base {
+  body {
+    @apply bg-accent text-primary font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-nav {
+  @apply bg-accent/80 backdrop-blur-md border-b border-primary/10 sticky top-0 z-50;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #c5a059 0%, #e8d1a7 50%, #c5a059 100%);
+}
+
+.text-gold {
+  @apply text-secondary;
+}
+
+.btn-primary {
+  @apply bg-primary text-accent px-8 py-3 rounded-full font-display font-medium transition-all hover:bg-primary/90 hover:scale-105 active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary px-8 py-3 rounded-full font-display font-medium transition-all hover:bg-primary hover:text-accent;
+}
